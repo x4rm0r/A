@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="800.0" maxWidth="600.0" minHeight="650.0" minWidth="400.0" prefHeight="650.0" prefWidth="400.0" spacing="10.0" styleClass="form-container" stylesheets="@nueva_alerta.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tds.gestiongastos.vista.AlertaVistaControlador">
+
+   <children>
+      <Label styleClass="form-title" text="Configuración Alertas">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+
+      <VBox spacing="5.0" VBox.vgrow="ALWAYS">
+          <Label styleClass="form-label" text="Alertas Activas:" />
+          
+          <ListView fx:id="listaAlertas" maxWidth="Infinity" minHeight="100.0" prefHeight="200.0" styleClass="list-view" VBox.vgrow="ALWAYS" />
+          
+          <HBox spacing="10.0">
+             <children>
+                <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#botonEditarAlerta" style="-fx-background-color: #3498db;" styleClass="btn-save" text="Editar" HBox.hgrow="ALWAYS" />
+                
+                <Button maxWidth="Infinity" onAction="#eliminarAlerta" style="-fx-background-color: #e74c3c;" styleClass="btn-save" text="Eliminar" HBox.hgrow="ALWAYS" />
+             </children>
+             <VBox.margin>
+                <Insets top="5.0" />
+             </VBox.margin>
+          </HBox>
+      </VBox>
+
+      <Region maxHeight="91.0" prefWidth="393.0" VBox.vgrow="ALWAYS" />
+
+      <VBox alignment="CENTER_LEFT" spacing="5.0" />
+      
+      <Label style="-fx-font-weight: bold;" text="Crear Alerta" />
+
+      <VBox>
+         <children>
+            <Label styleClass="form-label" text="Limite (€)*" />
+            <TextField fx:id="txtAlertaLimite" promptText="0.00" styleClass="form-field-money" />
+         </children>
+      </VBox>
+
+      <VBox>
+         <children>
+            <Label styleClass="form-label" text="Periodicidad *" />
+            <ComboBox fx:id="comboPeriodicidad" prefWidth="295.0" promptText="Seleccionar..." styleClass="combo-box-base" />
+         </children>
+      </VBox>
+
+      <VBox alignment="CENTER_LEFT" spacing="5.0">
+         <children>
+            <Label styleClass="form-label" text="Categoría" />
+            <HBox spacing="10.0">
+               <children>
+                  <ComboBox fx:id="comboAlertaCategoria" maxWidth="1.7976931348623157E308" promptText="Seleccionar..." HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="form-field" />
+                        <String fx:value="combo-box-base" />
+                     </styleClass>
+                  </ComboBox>
+                  
+                  <Button fx:id="btnNuevaCategoria" mnemonicParsing="false" onAction="#botonCategorias" styleClass="btn-icon-secondary" text="+">
+                     <tooltip>
+                        <Tooltip text="Crear nueva categoría" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+      <HBox alignment="CENTER" spacing="15.0">
+         <children>
+            <Button fx:id="CancelarNo" mnemonicParsing="false" onAction="#cancelarRegistro" styleClass="btn-cancel" text="Cerrar" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarAlerta" styleClass="btn-save" text="Guardar Alerta" />
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

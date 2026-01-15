@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>        
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="500.0" minWidth="500.0" prefHeight="800.0" prefWidth="1300.0" stylesheets="@cuenta_personal.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tds.gestiongastos.vista.CalendarioControlador">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="65.0" styleClass="top-bar" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#botonVolver" styleClass="btn-icon" text="⬅">
+                    <HBox.margin><Insets right="10.0" /></HBox.margin>
+                </Button>
+                <Label styleClass="header-title" text="Calendario">
+                    <font><Font name="System Bold" size="24.0" /></font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+
+                <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#botonImportarDatos" styleClass="btn-importar" text="Importar Gastos" />
+
+                        <Button mnemonicParsing="false" onAction="#botonHistorialNotificaciones" styleClass="btn-notificaciones" text="Historial Notificaciones">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
+                                    <image>
+                                        <Image url="@bellIcon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding><Insets left="20.0" right="20.0" /></padding>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox prefHeight="635.0" prefWidth="220.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <children>
+                <Label styleClass="sidebar-header" text="MENÚ PRINCIPAL" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonDashboard" styleClass="sidebar-btn" text="Dashboard" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonVerLimites" styleClass="sidebar-btn" text="Estado Límites" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonGrafico" styleClass="sidebar-btn" text="Gráficos" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonCalendario" styleClass="sidebar-btn-active" text="Calendario" />
+            <Button fx:id="btnBalance" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonVerBalance" styleClass="sidebar-btn" text="Ver Balance" />
+
+                <Separator opacity="0.3" prefWidth="200.0">
+                    <VBox.margin><Insets bottom="10.0" top="10.0" /></VBox.margin>
+                </Separator>
+
+                <Label styleClass="sidebar-header" text="CONFIGURACIÓN" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonNuevaAlerta" styleClass="sidebar-btn" text="Alertas" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonCategorias" styleClass="sidebar-btn" text="Categorías" />
+            </children>
+            <padding><Insets top="20.0" /></padding>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="15.0" styleClass="content-area-scroll" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+            </padding>
+            <children>
+
+                <HBox alignment="BOTTOM_LEFT" spacing="20.0" styleClass="recent-list-container">
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label styleClass="stat-label" text="Gastado" />
+                                <Label fx:id="lblGastoTotal" styleClass="stat-value" text="0.00 €" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+                    <children>
+
+                        <VBox styleClass="recent-list-container" HBox.hgrow="ALWAYS">
+                     <children>
+                        <StackPane fx:id="contenedorCalendario" prefHeight="514.0" prefWidth="1015.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>

@@ -1,0 +1,12 @@
+Date,Account,Category,Subcategory,Note,Payer,Amount,Currency
+1/07/2026 10:00,Personal,tarjeta,Desayuno,Café y tostada,Me,3.50,EUR
+1/07/2026 14:30,Piso,efectivo,Comida,Compra grande Mercadona,Juan,85.00,EUR
+1/07/2026 20:00,A,bizum,Cena,Pizzas para todos,paco,25.00,EUR
+1/08/2026 09:15,Porcentajes,transferencia,Alquiler,Pago mensual alquiler local,Felipe,400.00,EUR
+1/08/2026 11:30,Piso,tarjeta,Limpieza,Productos de baño,Paco,12.50,EUR
+1/08/2026 13:00,Personal,efectivo,Transporte,Recarga abono transporte,Me,20.00,EUR
+1/09/2026 15:45,A,tarjeta,Ocio,Entradas de cine,juan,32.00,EUR
+1/09/2026 18:00,Porcentajes,efectivo,Suministros,Factura de luz compartida,Pepe,95.50,EUR
+1/10/2026 21:30,Piso,bizum,Reparaciones,Bombilla pasillo,Pepe,4.50,EUR
+1/10/2026 14:00,Personal,tarjeta,Ropa,Camiseta nueva,Me,15.99,EUR
+1/10/2026 17:00,Patata,tarjeta,Recarga,Café,Maria,2.50,EUR

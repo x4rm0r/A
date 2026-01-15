@@ -1,0 +1,31 @@
+.calendar-view .tool-bar .button {
+    -fx-background-color: white !important;
+    -fx-text-fill: #11588f !important;
+    -fx-border-color: #11588f !important;
+    -fx-font-weight: bold !important;
+}
+
+
+.day-page .button {
+    -fx-background-color: #11588f !important;
+    -fx-text-fill: white !important;
+    -fx-background-radius: 10px !important;
+}
+
+.month-page .button {
+    -fx-background-color: #11588f !important;
+    -fx-text-fill: white !important;
+    -fx-background-radius: 10px !important;
+}
+
+.week-page .button {
+    -fx-background-color: #11588f !important;
+    -fx-text-fill: white !important;
+    -fx-background-radius: 10px !important;
+}
+
+.year-page .button {
+    -fx-background-color: #11588f !important;
+    -fx-text-fill: white !important;
+    -fx-background-radius: 10px !important;
+}
